@@ -1,0 +1,21 @@
+<div id="test"></div>
+
+<script>
+  console.log("Added Event Listener")
+  window.addEventListener("copy", () => {
+    console.log("Test")
+  })
+
+  function test() {
+    window.addEventListener("copy", () => {
+      console.log("Test")
+    })
+  }
+
+  function logWindow() {
+    console.log(window)
+  }
+</script>
+
+<button onclick="test()">Add Listener</button>
+<button onclick="logWindow()">Log Window</button>
