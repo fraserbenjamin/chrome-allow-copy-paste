@@ -3,26 +3,6 @@
   "description": "An extension to permit copy and paste on sites that block this feature",
   "version": "1.0",
   "manifest_version": 3,
-  "permissions": [
-    "activeTab",
-    "scripting",
-    "tabs",
-    "activeTab",
-    "webNavigation",
-    "<all_urls>"
-  ],
-  "content_scripts": [
-    {
-      "matches": [
-        "<all_urls>"
-      ],
-      "all_frames": true,
-      "js": [
-        "content-script.js"
-      ],
-      "run_at": "document_start"
-    }
-  ],
-  "minimum_chrome_version": "10.0",
+  "permissions": [],
   "devtools_page": "devtools.html"
 }
