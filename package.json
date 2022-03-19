@@ -7,7 +7,8 @@
     "zip": "cd build/ && bestzip ../chrome-allow-copy-paste.zip *",
     "pre-cleanup": "del-cli build && del-cli chrome-allow-copy-paste.zip",
     "post-cleanup": "del-cli build",
-    "build": "npm run pre-cleanup && npm run build-extension && npm run copy-icons && npm run build-tailwind && npm run zip && npm run post-cleanup"
+    "build": "npm run pre-cleanup && npm run build-extension && npm run copy-icons && npm run zip && npm run post-cleanup",
+    "build-local": "npm run pre-cleanup && npm run build-extension && npm run copy-icons"
   },
   "devDependencies": {
     "bestzip": "^2.2.0",
