@@ -1,7 +1,7 @@
 {
   "name": "Allow Copy/Paste",
   "description": "An extension to permit copy and paste on sites that block this feature",
-  "version": "1.0",
+  "version": "1.0.0",
   "manifest_version": 3,
   "permissions": [],
   "devtools_page": "devtools.html"

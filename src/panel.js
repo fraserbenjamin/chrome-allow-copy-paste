@@ -10,4 +10,4 @@ const installBlockListener = () => {
   chrome.devtools.inspectedWindow.reload({ injectedScript: blockListener });
 }
 
-document.getElementById("test").addEventListener("click", installBlockListener);
+document.getElementById("btnBlockListener").addEventListener("click", installBlockListener);
