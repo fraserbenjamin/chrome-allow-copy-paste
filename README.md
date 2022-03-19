@@ -5,7 +5,7 @@ Some websites block your ability to copy and paste text and content from them, t
 
 ## Development
 
-You can work on the HTML files individually using `npm install` and `npm run dev` which will start the tailwind cli to auto-generate your css.
+You can work on the HTML files individually using `npm install` and `npm run dev` which will start the Tailwind CLI to auto-generate your CSS.
 
 To deploy the extension to the Chrome Web Store a zip file can be created by running `npm run build` and the output file can be found in the root directory named `chrome-allow-copy-paste.zip`.
 
