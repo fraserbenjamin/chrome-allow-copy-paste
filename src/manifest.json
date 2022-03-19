@@ -4,5 +4,12 @@
   "version": "1.0.0",
   "manifest_version": 3,
   "permissions": [],
-  "devtools_page": "devtools.html"
+  "devtools_page": "devtools.html",
+  "icons": {
+    "16": "icons/allow-copy-paste-logo-16.png",
+    "48": "icons/allow-copy-paste-logo-48.png",
+    "128": "icons/allow-copy-paste-logo-128.png",
+    "256": "icons/allow-copy-paste-logo-256.png",
+    "512": "icons/allow-copy-paste-logo-512.png"
+  }
 }
