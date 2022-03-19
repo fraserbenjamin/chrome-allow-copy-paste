@@ -1,9 +1,18 @@
 {
   "scripts": {
     "dev": "npx tailwindcss -i ./src/index.css -o ./src/tailwind.css --watch",
-    "build-tailwind": "npx tailwindcss -i ./src/index.css -o ./src/tailwind.css"
+    "build-tailwind": "npx tailwindcss -i ./src/index.css -o ./build/tailwind.css",
+    "build-extension": "copyfiles -f src/*.html src/*.js src/manifest.json build && npm run build-tailwind",
+    "copy-icons": "copyfiles -f src/icons/* build/icons",
+    "zip": "cd build/ && bestzip ../chrome-allow-copy-paste.zip *",
+    "pre-cleanup": "del-cli build && del-cli chrome-allow-copy-paste.zip",
+    "post-cleanup": "del-cli build",
+    "build": "npm run pre-cleanup && npm run build-extension && npm run copy-icons && npm run build-tailwind && npm run zip && npm run post-cleanup"
   },
   "devDependencies": {
+    "bestzip": "^2.2.0",
+    "copyfiles": "^2.4.1",
+    "del-cli": "^4.0.1",
     "tailwindcss": "^3.0.23"
   }
 }
