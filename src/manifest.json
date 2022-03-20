@@ -11,5 +11,12 @@
     "128": "icons/allow-copy-paste-logo-128.png",
     "256": "icons/allow-copy-paste-logo-256.png",
     "512": "icons/allow-copy-paste-logo-512.png"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"],
+      "all_frames": true
+    }
+  ]
 }

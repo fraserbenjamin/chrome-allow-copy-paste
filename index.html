@@ -15,6 +15,12 @@
   function logWindow() {
     console.log(window)
   }
+
+  // [].forEach.call(['contextmenu', 'copy', 'cut', 'paste', 'mouseup', 'mousedown', 'keyup', 'keydown', 'drag', 'dragstart', 'select', 'selectstart'], function(event) {
+	// 	document.addEventListener(event, function(e) {
+	// 		e.stopPropagation();
+	// 	}, true);
+	// });
 </script>
 
 <button onclick="test()">Add Listener</button>
