@@ -2,6 +2,9 @@
 
 Some websites block your ability to copy and paste text and content from them, this extension works to prevent these restrictions from being added.
 
+## Usage
+
+When installed, by default the app can automatically block some of the simple restrictions. However to avoid the more complex ones, you'll need to open Chrome Developer Tools, select the **Allow Copy/Paste** tab and click the button to reload the page with the added scripts.
 
 ## Development
 
