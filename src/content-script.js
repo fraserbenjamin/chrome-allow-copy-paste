@@ -9,7 +9,7 @@ const enableCopyPaste = () => {
 const hostname = window.location.hostname.replace("www.", "");
 
 chrome.storage.sync.get(['enabledSites'], function(result) {
-  if(result.enabledSites.includes(hostname)) {
+  if(Array.isArray(result.enabledSites) && result.enabledSites.includes(hostname)) {
     enableCopyPaste();
   }
 });
