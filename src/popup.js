@@ -1,24 +1,35 @@
-document.getElementById("btnToggleEnabled").addEventListener("click", () => {
-    // Toggle Site Enabled
-    console.log("Toggle Enabled");
-    enableCopyPaste();
-});
-
-
 const enableCopyPaste = async () => {
     const currentTab = await getCurrentTab();
     const hostname = new URL(currentTab.url).hostname.replace("www.", "");
-    
-    const enabledSites = await getChromeValue("enabledSites");
-    if(Array.isArray(enabledSites)) {
-        if(!enabledSites.includes(hostname)) setChromeValue("enabledSites", [...enabledSites, hostname]);
-    } else {
-        setChromeValue("enabledSites", [hostname]);
-    }
 
     sendMessage({
         type: "enable"
     });
+    toggleButtons();
+
+    const enabledSites = await getChromeValue("enabledSites");
+    if (Array.isArray(enabledSites)) {
+        if (!enabledSites.includes(hostname)) setChromeValue("enabledSites", [...enabledSites, hostname]);
+    } else {
+        setChromeValue("enabledSites", [hostname]);
+    }
+}
+
+const toggleButtons = () => {
+    document.getElementById("btnEnable").classList.toggle("hidden");
+    document.getElementById("btnRestore").classList.toggle("hidden");
+}
+
+const restoreCopyPaste = async () => {
+    toggleButtons();
+
+    const currentTab = await getCurrentTab();
+    const hostname = new URL(currentTab.url).hostname.replace("www.", "");
+
+    const enabledSites = await getChromeValue("enabledSites");
+    if (Array.isArray(enabledSites) && enabledSites.includes(hostname)) {
+        setChromeValue("enabledSites", enabledSites.filter(url => url !== hostname));
+    }
 }
 
 const sendMessage = async (message) => {
@@ -44,3 +55,17 @@ const setChromeValue = async (key, value) => new Promise((resolve) => {
         resolve();
     });
 });
+
+const init = async () => {
+    const currentTab = await getCurrentTab();
+    const hostname = new URL(currentTab.url).hostname.replace("www.", "");
+    
+    document.getElementById("btnEnable").addEventListener("click", enableCopyPaste);
+    document.getElementById("btnRestore").addEventListener("click", restoreCopyPaste);
+
+    const enabledSites = await getChromeValue("enabledSites");
+    if (Array.isArray(enabledSites) && enabledSites.includes(hostname)) {
+        toggleButtons();
+    }
+};
+init();

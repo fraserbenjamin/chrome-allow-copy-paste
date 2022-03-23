@@ -10,13 +10,19 @@
 <body>
     <div class="p-3 space-y-3">
         <p class="text-sm text-gray-900">
-            Click the button below to allow copy and paste to this site.
+            Click the button below to toggle copy and paste on this site.
         </p>
 
         <button
             class="bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto"
-            id="btnToggleEnabled">
+            id="btnEnable">
             Allow Copy/Paste
+        </button>
+
+        <button
+            class="ring-2 ring-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-gray-900 font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto hidden"
+            id="btnRestore">
+            Restore Copy/Paste
         </button>
     </div>
 
