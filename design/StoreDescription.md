@@ -1,4 +1,4 @@
-![Google Webpage with Allow Copy/Paste Popup](design/allow-copy-paste-popup-raw.png?raw=true "Title")
+![Google Webpage with Allow Copy/Paste Popup](/design/allow-copy-paste-popup-raw.png)
 
 
 # Description
