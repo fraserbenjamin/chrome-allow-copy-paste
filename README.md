@@ -1,3 +1,5 @@
+<img alt="Google Webpage with Allow Copy/Paste Popup" src="design/allow-copy-paste-popup-raw.png" height="256">
+
 # Chrome Allow Copy/Paste
 
 Some websites block your ability to copy and paste text and content from them, this extension works to prevent these restrictions from being added.
