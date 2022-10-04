@@ -20,3 +20,6 @@ You can also test your app locally by visiting `chrome://extensions/` and clicki
 
 In the **design** folder you can find all the assets to publish the app on the Chrome Web Store.
 https://chrome.google.com/webstore/category/extensions
+
+## Chrome Store Link
+https://chrome.google.com/webstore/detail/allow-copypaste/ecfmkkhjjhjkdbnegnnkmbnnajmkgcfe
